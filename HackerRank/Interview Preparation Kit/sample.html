@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>HTML form Elements</title>
+</head>
+
+<body>
+    <form>
+        <label for="name"> Name:
+            <input type="text" id="name" name="username">
+        </label>
+
+        <p>
+            <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry">
+            <label for="taste_1">I like cherry</label> </p>
+        <p> <input type="checkbox" id="taste_2" name="taste_banana" value="banana">
+            <label for="taste_2">I like banana</label>
+        </p>
+
+        <p>
+            <label for="email"> Email -ID:</label>
+            <input type="email" id="email" name="email">
+        </p>
+
+        <p><label for="search"> Search Item:</label>
+            <input type="search" id="search" name="search">
+        </p>
+
+        <p><label for="phone"> Phone No:</label>
+            <input type="tel" id="phone" name="phone">
+        </p>
+
+        <p><label for="urlid"> URL:</label>
+            <input type="url" id="urlid" name="urlid">
+        </p>
+
+        <p><label for="age">Age:</label>
+            <input type="number" name="age" id="age" min="5" max="100" step="5">
+        </p>
+
+        <label for="price">Choose a maximum house price: </label>
+        <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+        <output class="price-output" for="price">
+        </output>
+
+        <p>
+            <label for="datetime">Choose a date:</label>
+            <input type="datetime-local" name="datetime" id="datetime">
+        </p>
+
+        <p><label for="color">Choose Color:</label>
+            <input type="color" name="color" id="color">
+        </p>
+    </form>
+</body>
+</html>
