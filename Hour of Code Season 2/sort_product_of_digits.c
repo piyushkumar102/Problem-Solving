@@ -17,24 +17,23 @@ int main()
             num = num / 10;
         }
         product[i] = prod;
-        printf("%d ", prod);
         prod = 1;
     }
     int j, temp;
-    for (i = 0; i < n - 1; i++)
+    for (i = 0; i < n; i++)
     {
-        for (j = 0; j < n-i-1; j++)
+        for (j = 0; j < n - i - 1; j++)
         {
-            if (product[i] >= product[j])
+            if (product[j] >= product[j + 1])
             {
-                temp = number[i];
-                number[i] = number[j];
-                number[j] = temp;
+                temp = number[j];
+                number[j] = number[j + 1];
+                number[j + 1] = temp;
             }
         }
     }
     for (i = 0; i < n; i++)
     {
-        printf("%d ", product[i]);
+        printf("%d ", number[i]);
     }
 }
