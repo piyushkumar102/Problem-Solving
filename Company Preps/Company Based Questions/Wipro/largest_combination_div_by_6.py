@@ -7,11 +7,11 @@ if q % 6 == 0:
 for j, i in enumerate(no):
     n = no
     n.remove(n[j])
-    n="".join(n)
+    n = "".join(n)
     n = int(n)
     if (n % 6 == 0):
         div6.append(n)
-div6i=[]
+div6i = []
 for i in div6:
     div6i.append(int(i))
 print(max(div6i))
