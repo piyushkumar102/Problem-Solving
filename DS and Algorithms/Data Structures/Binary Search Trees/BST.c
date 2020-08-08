@@ -9,9 +9,10 @@ struct node
 struct node *root = NULL;
 int count = 0;
 struct node *insert(struct node *, int);
-void display(struct node *);
 struct node *delete1(struct node *, int);
 struct node *min(struct node *root);
+void display(struct node *);
+
 int main()
 {
 	int i, val;

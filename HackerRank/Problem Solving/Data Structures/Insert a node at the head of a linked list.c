@@ -60,18 +60,6 @@ void free_singly_linked_list(SinglyLinkedListNode *node)
         free(temp);
     }
 }
-
-// Complete the insertNodeAtHead function below.
-
-/*
- * For your reference:
- *
- * SinglyLinkedListNode {
- *     int data;
- *     SinglyLinkedListNode* next;
- * };
- *
- */
 SinglyLinkedListNode *insertNodeAtHead(SinglyLinkedListNode *llist, int data)
 {
     SinglyLinkedListNode *temp = (struct SinglyLinkedListNode *)malloc(sizeof(SinglyLinkedListNode));

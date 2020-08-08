@@ -5,7 +5,7 @@ int main()
     scanf("%d", &n);
     scanf("%d", &query);
     int queries[query];
-    int a[n];
+    int a[n],i,mul;
     for (i = 0; i < n; i++)
     {
         scanf("%d", &a[i]);
@@ -39,6 +39,6 @@ int main()
     }
     else
     {
-        printf("ODD";)
+        printf("ODD");
     }
 }

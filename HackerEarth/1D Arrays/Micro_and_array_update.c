@@ -1,28 +1,24 @@
 #include <stdio.h>
 int main()
 {
-    int t, ti;
-    scanf("%d", &ti);
-    for (ti = 0; ti < t; ti++)
+    int t, i, min = 0;
+    long int n, k;
+    scanf("%d", &t);
+    while (t--)
     {
-        int n, k, count = 0, i, j;
-        scanf("%d %d", &n, &k);
-        int a[n];
+        scanf("%ld%ld", &n, &k);
+        long int a[n];
+        for (i = 0; i < n; i++)
+            scanf("%ld", &a[i]);
+        min = a[0];
         for (i = 0; i < n; i++)
         {
-            scanf("%d", &a[i]);
+            if (a[i] < min)
+                min = a[i];
         }
-        for (i = 0; i < k; i++)
-        {
-            for (j = 0; j < n; j++)
-            {
-                if (k < a[j])
-                {
-                    a[j] = a[j]++;
-                }
-            }
-            count++;
-        }
-        printf("%d\n", count);
+        if (k > min)
+            printf("%ld\n", k - min);
+        else
+            printf("0\n");
     }
 }
