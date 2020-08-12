@@ -7,7 +7,7 @@ struct node
 };
 struct node *start = NULL;
 void create(int);
-//void search();
+void search();
 void display();
 int main()
 {
