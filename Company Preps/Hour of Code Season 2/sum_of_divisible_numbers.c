@@ -1,3 +1,5 @@
+//You are required to calculate the sum of the numbers divisible by 3 and 5, between 'a' and 'b' both inclusive and return same.
+
 #include <stdio.h>
 int main()
 {
