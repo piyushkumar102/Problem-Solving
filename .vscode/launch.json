@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Addition",
+            "request": "launch",
+            "mainClass": "Addition",
+            "projectName": "Problem Solving_6e440cff"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Infix_postfix",
             "request": "launch",
             "mainClass": "Infix_postfix",
