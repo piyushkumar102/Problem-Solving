@@ -106,3 +106,43 @@ Input 2
 Output 2
 
 8
+
+
+
+
+
+ Question No: 1
+Coding Type Question
+
+Babu wants to design software to calculate the Electricity bill. He needs to calculate the final amount based on meter reading. Help babu to calculate the electricity bill based on the initial and final meter reading.
+
+
+Input format
+
+Initial reading in the meter
+
+Final reading in the meter
+Output format
+
+Total amount
+Code constraints
+
+Initial reading in the meter<=Final reading in the meter
+Sample testcases
+Input 1
+
+400
+1200
+
+Output 1
+
+Rs. 3760.00
+
+Input 2
+
+1200
+1100
+
+Output 2
+
+Invalid Input
