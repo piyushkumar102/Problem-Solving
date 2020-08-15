@@ -1,0 +1,21 @@
+Krish has unpacked all his belongings and is now left with empty cardboard boxes. he has very minimal space in his apartment to store his boxes. Hence, he plans to put one inside the other in order to accommodate. However, one box can be fitted inside another only if the size of the bigger one is at least twice the size of the smaller one.
+
+You are required to write a code by incorporating this scenario so that Krish gets to know the final number of boxes he has to accommodate.
+
+
+For example, if the boxes are of sizes 2, 4 and 8, then Krish can pout the box 2 inside 4 and then 4 inside 8 thereby having only one box to optimize his space.
+Input format
+
+Two lines of input where first line has the total number of boxes and the next line has the size of each box separated by a space.
+Output format
+
+Output displays the total amount of boxes after the optimization process.
+Sample testcases
+Input 1
+
+1
+1 2 4 8
+
+Output 1
+
+1

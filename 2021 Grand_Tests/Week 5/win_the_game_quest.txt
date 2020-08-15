@@ -1,0 +1,99 @@
+A rather ridiculous computer "game" is proposed as follows:  The unsuspecting player is told that the computer has picked a number between 1 and 10, and she is invited to guess it in as few moves as possible. The computer actually cheats - the user is allowed to make 9 guesses, all of which are scored as "wrong", after which the computer displays a suitable message and discloses the number. The game is given to two programmers to develop.  Jacob tries to be clever, and simply to add the nine numbers together.  Thabo decides to develop it by using an array to keep track of the poor player's progress. Show how each of these ideas could be developed into separate, simple, complete short programs.  Assume that the human player is honest and accurate (so do not bother to check that a human guess is "out of range" - assume that a nine different numbers in the range 1 through 10 will be supplied each time). What would be the effect of meeting a perverse player who chose a particular number more than once?
+Input format
+
+Inputs are a set of nine integers between 1 to 10.
+Output format
+
+Output is a suitable message to the player about his probability to win the game.
+
+example:
+
+if no numbers are repeated-----------> clever player
+
+if numbers are repeated not more than twice-----------> good player
+
+if numbers are repeated not more than four times-----------> Average player
+
+if numbers are repeated not more than 7 times-----------> worst player
+
+if numbers are repeated more than 8 times-----------> poorest player
+Sample testcases
+Input 1
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Output 1
+
+Clever player
+
+Input 2
+
+1
+2
+3
+3
+4
+5
+6
+7
+8
+
+Output 2
+
+Good player
+
+Input 3
+
+1
+1
+1
+1
+2
+3
+4
+5
+6
+
+Output 3
+
+Average player
+
+Input 4
+
+1
+1
+2
+2
+3
+3
+4
+4
+4
+
+Output 4
+
+Worst player
+
+Input 5
+
+4
+4
+4
+4
+4
+4
+4
+4
+4
+
+Output 5
+
+Poorest p
