@@ -2,6 +2,7 @@
 #include <stdlib.h>
 void create(int);
 void display();
+void delete_tail();
 struct node
 {
 	int info;
@@ -29,19 +30,31 @@ void create(int val)
 		new_node->next = NULL;
 		start = new_node;
 	}
-	else if (start != NULL)
+	else
 	{
 		struct node *new_node, *ptr;
-		ptr = start;
 		new_node = (struct node *)malloc(sizeof(struct node));
+		ptr = start;
+		new_node->info = val;
 		while (ptr->next != NULL)
 		{
 			ptr = ptr->next;
 		}
 		ptr->next = new_node;
-		new_node->info = val;
 		new_node->next = NULL;
 	}
+}
+void delete_tail()
+{
+	struct node *temp, *prev;
+	temp = start;
+	while (temp->next != start)
+	{
+		prev=temp;
+		temp = temp->next;
+	}
+	free(temp);
+	prev->next=start;
 }
 void display()
 {
@@ -49,6 +62,7 @@ void display()
 	struct node *disp;
 	disp = start;
 	printf("\n");
+	printf("Display");
 	while (disp != NULL)
 	{
 		printf("%d->", disp->info);

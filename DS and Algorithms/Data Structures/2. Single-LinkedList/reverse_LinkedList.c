@@ -1,27 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+void create();
+void display();
+void reverse();
 struct node
 {
     int info;
     struct node *next;
 };
 struct node *start = NULL;
-void create(int);
-void search();
-void display();
 int main()
 {
-    int n;
+    int n, i, val;
     scanf("%d", &n);
-    int i, val;
     for (i = 0; i < n; i++)
     {
         scanf("%d", &val);
         create(val);
     }
-    int key;
-    scanf("%d", &key);
-    search(key);
+    display();
+    reverse();
+    printf("Reversed List\n");
     display();
 }
 void create(int val)
@@ -34,36 +33,37 @@ void create(int val)
         new_node->next = NULL;
         start = new_node;
     }
-    else
+    else if (start != NULL)
     {
         struct node *new_node, *temp;
-        new_node = (struct node *)malloc(sizeof(struct node));
         temp = start;
-        new_node->info = val;
-        new_node->next = NULL;
+        new_node = (struct node *)malloc(sizeof(struct node));
         while (temp->next != NULL)
         {
             temp = temp->next;
         }
         temp->next = new_node;
+        new_node->info = val;
+        new_node->next = NULL;
     }
 }
-void search(int key)
+void reverse()
 {
-    struct node *temp;
-    temp = start;
-    while(temp->next!=NULL)
+    struct node *current = start;
+    struct node *prev = NULL;
+    struct node *next = NULL;
+    while (current != NULL)
     {
-        if(temp->info==key)
-        {
-            printf("Found");
-            break;
-        }      
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
     }
+    start = prev;
 }
 void display()
 {
-    int count;
+    int count = 0;
     struct node *disp;
     disp = start;
     printf("\n");
@@ -75,7 +75,7 @@ void display()
     }
     if (disp == NULL)
     {
-        printf("X");
+        printf("X\n");
     }
     printf("\nNumber of nodes: %d\n", count);
 }
