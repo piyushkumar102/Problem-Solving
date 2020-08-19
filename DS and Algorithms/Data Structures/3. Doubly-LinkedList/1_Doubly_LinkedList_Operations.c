@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 void create(int);
-void del(int);
-void del_end();
-void del_beg(int);
-void insert_end(int);
+void insert_tail(int);
+void insert_beg(int);
+void delete (int);
+void delete_tail();
 void display();
 struct node
 {
@@ -20,28 +20,52 @@ int main()
     for (i = 0; i < n; i++)
     {
         scanf("%d", &val);
-        if (i == 0)
-        {
-            create(val);
-        }
-        else
-        {
-            insert_end(val);
-        }
+        create(val);
     }
+    scanf("%d", &val);
+    insert_beg(val);
     scanf("%d", &pos);
     if (pos == n)
     {
-        del_end();
+        delete_tail();
     }
     else if (pos > n)
     {
         display();
     }
     else
-        del(pos);
+        delete(pos);
+    display();
 }
-void insert_end(int val)
+void create(int val)
+{
+    int n;
+    struct node *newnode;
+    newnode = (struct node *)malloc(sizeof(struct node));
+    if (start == NULL)
+    {
+        newnode->left = NULL;
+        newnode->info = val;
+        newnode->right = NULL;
+        start = newnode;
+    }
+    else
+    {
+        insert_tail(val);
+    }
+}
+void insert_beg(int val)
+{
+    printf("First %d", start->info);
+    struct node *newnode;
+    newnode = (struct node *)malloc(sizeof(struct node));
+    start->left = newnode;
+    newnode->left = NULL;
+    newnode->info = val;
+    newnode->right = start;
+    start = newnode;
+}
+void insert_tail(int val)
 {
     struct node *newnode;
     struct node *ptr;
@@ -56,35 +80,7 @@ void insert_end(int val)
     newnode->info = val;
     newnode->right = NULL;
 }
-void display()
-{
-    struct node *ptr;
-    ptr = start;
-    while (ptr != NULL)
-    {
-        printf("%d ", ptr->info);
-        ptr = ptr->right;
-    }
-    printf("\n");
-}
-void create(int val)
-{
-    int n;
-    struct node *newnode;
-    newnode = (struct node *)malloc(sizeof(struct node));
-    if (start == NULL)
-    {
-        newnode->info = val;
-        newnode->right = NULL;
-        newnode->left = NULL;
-        start = newnode;
-    }
-    else
-    {
-        insert_end(val);
-    }
-}
-void del(int val)
+void delete (int val)
 {
     int pos = val - 1;
     if (pos == 0)
@@ -118,7 +114,7 @@ void del(int val)
     }
     display();
 }
-void del_end()
+void delete_tail()
 {
     struct node *ptr;
     ptr = start;
@@ -129,4 +125,22 @@ void del_end()
     ptr->left->right = NULL;
     free(ptr);
     display();
+}
+void display()
+{
+    int count = 0;
+    struct node *disp;
+    disp = start;
+    printf("\n");
+    while (disp != NULL)
+    {
+        printf("%d->", disp->info);
+        disp = disp->right;
+        count++;
+    }
+    if (disp == NULL)
+    {
+        printf("X");
+    }
+    printf("\nNumber of nodes: %d\n", count);
 }

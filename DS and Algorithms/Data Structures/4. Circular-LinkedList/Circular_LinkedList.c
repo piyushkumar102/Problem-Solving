@@ -19,29 +19,29 @@ int main()
 		create(val);
 	}
 	display();
+	delete_tail();
+	display();
 }
 void create(int val)
 {
+	struct node *new_node;
+	new_node = (struct node *)malloc(sizeof(struct node));
+	new_node->info = val;
 	if (start == NULL)
 	{
-		struct node *new_node;
-		new_node = (struct node *)malloc(sizeof(struct node));
-		new_node->info = val;
-		new_node->next = NULL;
 		start = new_node;
+		new_node->next = start;
 	}
 	else
 	{
-		struct node *new_node, *ptr;
-		new_node = (struct node *)malloc(sizeof(struct node));
+		struct node *ptr;
 		ptr = start;
-		new_node->info = val;
-		while (ptr->next != NULL)
+		while (ptr->next != start)
 		{
 			ptr = ptr->next;
 		}
 		ptr->next = new_node;
-		new_node->next = NULL;
+		new_node->next = start;
 	}
 }
 void delete_tail()
@@ -50,28 +50,25 @@ void delete_tail()
 	temp = start;
 	while (temp->next != start)
 	{
-		prev=temp;
+		prev = temp;
 		temp = temp->next;
 	}
 	free(temp);
-	prev->next=start;
+	prev->next = start;
 }
 void display()
 {
 	int count;
 	struct node *disp;
 	disp = start;
-	printf("\n");
-	printf("Display");
-	while (disp != NULL)
+	printf("Display\n");
+	while (disp->next != start)
 	{
 		printf("%d->", disp->info);
 		disp = disp->next;
 		count++;
 	}
-	if (disp == NULL)
-	{
-		printf("X");
-	}
+	printf("%d->", disp->info);
+	count++;
 	printf("\nNumber of nodes: %d\n", count);
 }
