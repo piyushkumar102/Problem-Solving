@@ -1,4 +1,3 @@
-//Stack Operations in Array
 #include <stdio.h>
 #include <stdlib.h>
 #define size 5
