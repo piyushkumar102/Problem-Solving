@@ -2,7 +2,7 @@
 #include <stdlib.h>
 struct node
 {
-	int data;
+	int info;
 	struct node *left;
 	struct node *right;
 };
@@ -12,11 +12,11 @@ struct node *insert(struct node *, int);
 struct node *delete1(struct node *, int);
 struct node *min(struct node *root);
 void display(struct node *);
-
 int main()
 {
-	int i, val;
-	for (i = 0; i < 10; i++)
+	int i, val, n;
+	scanf("%d", &n);
+	for (i = 0; i < n; i++)
 	{
 		scanf("%d", &val);
 		root = insert(root, val);
@@ -26,18 +26,18 @@ int main()
 }
 struct node *insert(struct node *root, int val)
 {
-	struct node *nn;
-	nn = (struct node *)malloc(sizeof(struct node));
-	nn->data = val;
+	struct node *new_node;
+	new_node = (struct node *)malloc(sizeof(struct node));
+	new_node->info = val;
 	if (root == NULL)
 	{
-		nn->left = nn->right = NULL;
-		root = nn;
+		new_node->left = new_node->right = NULL;
+		root = new_node;
 		count++;
 	}
 	else
 	{
-		if (val < root->data)
+		if (val < root->info)
 		{
 			root->left = insert(root->left, val);
 		}
@@ -53,7 +53,7 @@ void display(struct node *root)
 	if (root != NULL)
 	{
 		display(root->left);
-		printf("%d ", root->data);
+		printf("%d ", root->info);
 		display(root->right);
 	}
 }
@@ -63,11 +63,11 @@ struct node *delete1(struct node *root, int val)
 	{
 		return NULL;
 	}
-	if (val > root->data)
+	if (val > root->info)
 	{
 		root->right = delete1(root->right, val);
 	}
-	else if (val < root->data)
+	else if (val < root->info)
 	{
 		root->left = delete1(root->left, val);
 	}
@@ -93,12 +93,12 @@ struct node *delete1(struct node *root, int val)
 		else
 		{
 			struct node *temp = min(root->right);
-			root->data = temp->data;
-			root->right = delete1(root->right, temp->data);
+			root->info = temp->info;
+			root->right = delete1(root->right, temp->info);
 		}
 	}
 }
-struct node *min(struct node *root) //Minimum in right side of root
+struct node *min(struct node *root) //Minimum in left side of root
 {
 	if (root == NULL)
 		return NULL;

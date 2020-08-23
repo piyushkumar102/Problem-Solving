@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #include <stdlib.h>
 struct tree
 {
@@ -9,9 +8,7 @@ struct tree
 };
 struct tree *insert(struct tree *, int);
 void inorder(struct tree *);
-
 struct tree *delet(struct tree *, int);
-
 int main(void)
 {
     struct tree *root;
@@ -28,7 +25,6 @@ int main(void)
     root = delet(root, item_no);
     inorder(root);
 }
-
 struct tree *insert(struct tree *root, int x)
 {
     if (!root)
