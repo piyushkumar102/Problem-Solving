@@ -3,23 +3,23 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-int main() 
+int main()
 {
-    int i,n,a[100],count=0,b,flag=0;
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
+    int i, n, a[100], count = 0, b, flag = 0;
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d", &a[i]);
     }
-    for(i=0;i<n;i++)
+    for (i = 0; i < n; i++)
     {
-    	b=a[i]-a[i+1];
-        if(b==1||b==-1)
+        b = a[i] - a[i + 1];
+        if (b == 1 || b == -1)
         {
             count++;
-        }       
+        }
     }
-    if (count==n-1)
+    if (count == n - 1)
     {
         printf("true");
     }
@@ -27,4 +27,3 @@ int main()
         printf("false");
     return 0;
 }
-    

@@ -1,9 +1,7 @@
 //Structure Basic
 #include <stdio.h>
-
-void main()
+int main()
 {
-
     struct details
     {
         char name[20];
@@ -14,13 +12,11 @@ void main()
     struct details item[7];
     int n, i;
     int sum = 0;
-
     printf("Enter number of items:");
     scanf("%d", &n);
     fflush(stdin);
     for (i = 0; i < n; i++)
     {
-
         printf("Item name: \n");
         scanf("%s", item[i].name);
 
@@ -39,7 +35,7 @@ void main()
         sum = sum + item[i].price;
     }
     printf("%d", sum);
-    printf("S.N.;NAME ;CODE;  QUANTITY; PRICE  \n");
+    printf("\nS.N.;NAME ;CODE;  QUANTITY; PRICE  \n");
 
     for (i = 0; i < n; i++)
         printf("%d     %s        %-d          %-5d     %-5d\n", i + 1, item[i].name, item[i].code, item[i].qty,

@@ -4,7 +4,7 @@ void swap1(int, int);
 int main(void)
 {
     int x, y;
-    scanf("%d%d", &x, &y);
+    scanf("%d %d", &x, &y);
     printf("%d %d", x, y);
     printf("\nAddress of x and y:%d,%d", &x, &y);
     swap(&x, &y);

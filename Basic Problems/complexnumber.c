@@ -9,12 +9,12 @@ complex sum(complex *p1, complex *p2);
 void main()
 {
     complex c1, c2, c3;
-    printf("enter c1");
-    scanf("%d%d", &c1.real, &c1.img);
-    printf("enter c2");
-    scanf("%d%d", &c2.real, &c2.img);
+    printf("Enter c1");
+    scanf("%d %d", &c1.real, &c1.img);
+    printf("Enter c2");
+    scanf("%d %d", &c2.real, &c2.img);
     c3 = sum(&c1, &c2);
-    printf("sum:%d%d", c3.real, c3.img);
+    printf("Sum: %d %d", c3.real, c3.img);
 }
 complex sum(complex *p1, complex *p2)
 {

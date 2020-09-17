@@ -1,23 +1,23 @@
-#include<stdio.h>
+#include <stdio.h>
 #define IN 1
 #define OUT 0
 int main()
 {
-	int c,nl,nw,nc,state;
-	state=OUT;
-	nl=nw=nc=0;//Declaration in single line
-	while((c=getchar())!=EOF)
+	int c, nl, nw, nc, state;
+	state = OUT;
+	nl = nw = nc = 0; //Declaration in single line
+	while ((c = getchar()) != EOF)
 	{
 		++nc;
-		if(c=='\n')
+		if (c == '\n')
 			++nl;
-		if(c==' '||c=='\n'||c=='\t')
-		 	state=OUT;
-		else if(state==OUT)
+		if (c == ' ' || c == '\n' || c == '\t')
+			state = OUT;
+		else if (state == OUT)
 		{
-			state=IN;
+			state = IN;
 			++nw;
 		}
 	}
-	printf("%d %d %d\n",nl,nw,nc);//Ctrl+Z EOF
+	printf("%d %d %d\n", nl, nw, nc); //Ctrl+Z EOF
 }

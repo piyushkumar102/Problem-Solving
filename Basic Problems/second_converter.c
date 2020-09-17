@@ -3,7 +3,7 @@
 int main()
 {
     int n, hr, min, sec;
-    printf("enter seconds");
+    printf("Enter seconds");
     scanf("%d", &n);
     if (n < 3600)
     {
@@ -11,12 +11,12 @@ int main()
         sec = n % 60;
         hr = min / 60;
         min = min % 60;
-        printf("converted format %d hour %d mins %d sec", hr, min, sec);
+        printf("Converted format: %d Hour %d Mins %d Sec", hr, min, sec);
     }
     else
     {
         min = n / 60;
         sec = n % 60;
-        printf("converted format %d mins %d secs", min, sec);
+        printf("Converted format: %d Mins %d Secs", min, sec);
     }
 }

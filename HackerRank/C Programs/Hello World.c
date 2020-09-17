@@ -3,9 +3,9 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main() 
+int main()
 {
-	
+
     char s[100];
     gets(s);
     printf("Hello, World!");
