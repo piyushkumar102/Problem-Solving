@@ -11,6 +11,5 @@
         "initializer_list": "c",
         "regex": "c",
         "valarray": "c"
-    },
-    "python.pythonPath": "C:\\Users\\piyus\\Anaconda3\\python.exe"
+    }
 }
