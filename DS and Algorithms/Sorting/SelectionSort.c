@@ -9,19 +9,19 @@ int main()
 		scanf("%d", &a[i]);
 	}
 	int min, temp;
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n - 1; i++)
 	{
-		min = a[i];
+		min = i;
 		for (j = i + 1; j < n; j++)
 		{
-			if (a[j] < min)
+			if (a[j] < a[min])
 			{
-				temp = a[i];
-				a[i] = a[j];
-				a[j] = temp;
-				min = a[j];
+				min = j;
 			}
 		}
+		temp = a[i];
+		a[i] = a[min];
+		a[min] = temp;
 	}
 	for (i = 0; i < n; i++)
 	{
