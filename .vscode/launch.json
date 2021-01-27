@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BFS",
+            "request": "launch",
+            "mainClass": "BFS",
+            "projectName": "Problem Solving_38cc9307"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - power",
             "request": "launch",
             "mainClass": "power",
@@ -62,4 +69,4 @@
         }
     ]
 }
-//Waste
+//Wasted

@@ -33,3 +33,10 @@ void swap(int *px, int *py) /* interchange *px and *py */
     *px = *py;
     *py = temp;
 }
+
+/*
+OP:
+Input: 5
+Array: 1 2 3 4 5
+Output: 2 4 1 3 5
+*/

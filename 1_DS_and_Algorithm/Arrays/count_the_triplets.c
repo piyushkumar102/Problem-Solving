@@ -30,5 +30,19 @@ int main()
             }
         }
     }
-    printf("Triplets:\n%d", count / 2);
+    printf("Triplets: %d", count / 2);
 }
+
+/*
+Input: 5
+Array: 1 2 3 4 5
+1 2
+1 3
+1 4
+2 1
+2 3
+3 1
+3 2
+4 1
+Triplets: 4
+*/

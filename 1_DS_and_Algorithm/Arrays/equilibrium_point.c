@@ -21,3 +21,9 @@ int main()
             printf("%d", i);
     }
 }
+
+/*
+Input: 5
+Array: 1 2 0 2 1
+Ouput: 3
+*/

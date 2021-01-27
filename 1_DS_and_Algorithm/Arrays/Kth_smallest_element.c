@@ -23,3 +23,8 @@ int main(void)
     printf("%d ", a[k - 1]);
     return 0;
 }
+/*
+Input: 5 2
+Array: 1 2 3 4 5
+Output: 2
+*/

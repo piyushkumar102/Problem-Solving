@@ -1,4 +1,4 @@
-//Rankng an Array
+//Ranking an Array
 #include <stdio.h>
 int main()
 {

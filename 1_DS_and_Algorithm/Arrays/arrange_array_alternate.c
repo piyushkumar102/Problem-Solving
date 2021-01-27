@@ -22,3 +22,9 @@ int main()
         printf("%d ", temp[i]);
     }
 }
+
+/* 
+Input: 5 
+Array: 1 2 3 4 5
+Output: 5 1 2 4 3
+*/

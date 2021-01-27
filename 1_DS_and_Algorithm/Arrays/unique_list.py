@@ -7,3 +7,8 @@ for i in lst:
     else:
         unique.append(i)
 print(*unique)
+
+# OP: Array consisting of Distinct Elements
+
+
+

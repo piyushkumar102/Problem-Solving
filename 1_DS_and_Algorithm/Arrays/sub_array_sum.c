@@ -25,3 +25,10 @@ int main()
     }
     printf("%d %d", i, j);
 }
+
+/*
+Input: 5 (Size) 3(Sum)
+Array: 1 1 1 1 1
+OP: 0 2
+Explanation: Sum=3 when elements in index 0 to 2 are added 
+*/
