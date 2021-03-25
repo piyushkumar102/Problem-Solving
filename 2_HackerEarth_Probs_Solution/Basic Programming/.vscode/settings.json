@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "limits": "c",
-        "chrono": "c",
-        "random": "c"
-    }
-}
