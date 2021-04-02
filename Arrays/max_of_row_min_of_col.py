@@ -22,4 +22,4 @@ if (min(max_of_col) == max(min_of_row)):
     print("The " + str(n) + " Square grid is nice.")
 else:
     print("The " + str(n) + " Square grid is not nice.")
-    look
+

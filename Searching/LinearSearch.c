@@ -19,3 +19,9 @@ int main()
 		}
 	}
 }
+
+/*
+Time Complexity: O(n)
+Best-case: O(1)
+Average performance: O(n/2)
+*/

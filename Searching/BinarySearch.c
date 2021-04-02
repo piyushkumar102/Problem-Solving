@@ -15,19 +15,24 @@ int main()
 	scanf("%d", &key);
 	for (i = 0; i < n; i++)
 	{
-		mid = (l + u) / 2;
-		if (key < a[mid])
+		mid = l + (u - 1) / 2;
+		if (key == a[mid])
 		{
-			u = mid - 1; //Change the upper bound to the element left to mid
+			printf("Element Found at index: %d", mid);
+			break;
 		}
 		else if (key > a[mid])
 		{
 			l = mid + 1; //Change lower Bound to element right to Mid
 		}
-		else if (key == a[mid])
+		else
 		{
-			printf("Element Found at index: %d", i);
-			break;
+			u = mid - 1; //Change the upper bound to the element left to mid
 		}
 	}
 }
+
+/*
+Time Complexity: O(log n)
+Best-Case: O(1)
+*/

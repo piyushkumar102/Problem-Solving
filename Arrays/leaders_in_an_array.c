@@ -1,4 +1,5 @@
-//An element of array is leader if it is greater than or equal to all the elements to its right side.
+//An element of array is leader 
+//if it is greater than or equal to all the elements to its right side.
 //Also, the rightmost element is always a leader.
 #include <stdio.h>
 int main()

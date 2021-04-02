@@ -6,7 +6,6 @@ int main()
     int count = 0;
     int i, j;
     float avg;
-    printf("Enter no. of inputs");
     scanf("%d", &c);
     int a[c];
     for (i = 0; i < c; i++)
@@ -21,7 +20,6 @@ int main()
             if (a[i] == a[j])
                 count++;
         }
-
         if (count % 2 != 0 && count >= 2)
             printf("\n%dRepeating odd number of times", a[i]);
     }
