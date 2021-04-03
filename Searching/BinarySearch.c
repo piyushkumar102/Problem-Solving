@@ -15,7 +15,7 @@ int main()
 	scanf("%d", &key);
 	for (i = 0; i < n; i++)
 	{
-		mid = l + (u - 1) / 2;
+		mid = l + (u - l) / 2;
 		if (key == a[mid])
 		{
 			printf("Element Found at index: %d", mid);
